@@ -17,3 +17,7 @@ index.json 是 Mapbox style object.包含地图样式和数据. 使用mapbox 的
 gltf 是一个使用 tree.js用来预览3d 模型文件的网站,并且他的代码是开源的可以用来参考 tree.json 的使用.https://gltf-viewer.donmccurdy.com/
 
 目录中的截图就是该网站默认打开3D 模型的样子.
+
+
+
+完成的代码提交到自己的 github 上,然后把项目地址给我们进行检查.
