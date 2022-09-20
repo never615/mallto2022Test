@@ -1,4 +1,4 @@
-题目是使用 mapbox 引擎配合 tree.js 渲染出3d 模型并和 mapbox 引擎融合.
+题目是使用 mapbox 引擎配合 tree.js 渲染出3d 模型(模型需要和 mapbox 引擎融合).
 
 地图引擎 mapbox 官网:mapbox.com
 mapbox 文档中接入3d 模型的部分:https://docs.mapbox.com/mapbox-gl-js/example/add-3d-model/
