@@ -15,7 +15,7 @@
 
 ### 涉及到的文件
 * 目录中的 rd.gltf 是3d 模型文件
-* index.json 是 Mapbox style object.包含地图样式和数据. 使用mapbox 的setstyle api 可以设置改 json文件.
+* index.json 是 Mapbox style object.包含地图样式和数据. 使用mapbox 的setstyle api 可以设置这个 json 数据,当然也有其它 api 加载数据的入口,均可使用.
 
 
 ---
