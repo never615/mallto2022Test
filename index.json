@@ -1,0 +1,324 @@
+{
+    "version": 8,
+    "name": "111",
+    "owner": "系统管理",
+    "center": [
+        118.376379208368,
+        32.4034677749563
+    ],
+    "zooms": [
+        15,
+        21
+    ],
+    "zoom": 17.3,
+    "pitch": 20,
+    "light": {
+        "color": "white",
+        "position": [
+            3,
+            150,
+            30
+        ]
+    },
+    "glyphs": "https:\/\/cdn.mall-to.com\/fonts\/{fontstack}\/{range}.pbf",
+    "sprite": "https:\/\/cdn.mall-to.com\/sprites\/s3?v=1",
+    "sources": {
+        "base": {
+            "type": "geojson",
+            "data": "https:\/\/file.mall.mall-to.com\/map_data\/2490393e9ec50a0339e7cbdf3ce76ab7.json"
+        },
+        "facilities": {
+            "type": "geojson",
+            "data": "https:\/\/integration-easy.mall-to.com\/api\/facility?uuid=4035&floor_id=138&data_type=geojson&language=zh_Hans"
+        }
+    },
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "interactive": false,
+            "paint": {
+                "background-color": "#ededed"
+            }
+        },
+        {
+            "id": "base-bg",
+            "type": "fill",
+            "source": "base",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "disable"
+                ]
+            ],
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "1#"
+                    ],
+                    "#dcf3f3",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "other"
+                    ],
+                    "#fceeee",
+                    "#fafafa"
+                ]
+            }
+        },
+        {
+            "id": "area-bg",
+            "type": "fill",
+            "source": "base",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "area-bg"
+                ]
+            ],
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "1#"
+                    ],
+                    "#dcf3f3",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "other"
+                    ],
+                    "#fceeee",
+                    "#fafafa"
+                ]
+            }
+        },
+        {
+            "id": "building",
+            "type": "fill",
+            "source": "base",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "type",
+                    "building"
+                ]
+            ],
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "1#"
+                    ],
+                    "#f9fdfc",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "other"
+                    ],
+                    "#fceeee",
+                    "#ededed"
+                ]
+            }
+        },
+        {
+            "id": "base-boundary",
+            "type": "fill",
+            "source": "base",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "type",
+                    "boundary"
+                ]
+            ],
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "1#"
+                    ],
+                    "#f9fdfc",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "block"
+                        ],
+                        "other"
+                    ],
+                    "#fceeee",
+                    "#ededed"
+                ]
+            }
+        },
+        {
+            "id": "base-disable",
+            "type": "fill-extrusion",
+            "source": "base",
+            "filter": [
+                "==",
+                "type",
+                "disable"
+            ],
+            "paint": {
+                "fill-extrusion-height": 3,
+                "fill-extrusion-color": "#ededed"
+            }
+        },
+        {
+            "id": "base-wall",
+            "type": "fill",
+            "source": "base",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "type",
+                    "wall"
+                ]
+            ],
+            "paint": {
+                "fill-color": "#ededed"
+            }
+        },
+        {
+            "id": "base-facility",
+            "type": "fill-extrusion",
+            "source": "base",
+            "filter": [
+                "in",
+                "type",
+                "esc_u",
+                "esc_d",
+                "lift_u",
+                "lift_d",
+                "stairs_u",
+                "stairs",
+                "stairs_d",
+                "default-facility",
+                "facility"
+            ],
+            "paint": {
+                "fill-extrusion-height": 3,
+                "fill-extrusion-color": "#f4f6fc"
+            }
+        },
+        {
+            "id": "base-line",
+            "type": "line",
+            "source": "base",
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": 1,
+                "line-color": "#333",
+                "line-opacity": 0.5
+            }
+        },
+        {
+            "id": "facilities",
+            "type": "symbol",
+            "source": "facilities",
+            "filter": [
+                ">",
+                [
+                    "zoom"
+                ],
+                16
+            ],
+            "layout": {
+                "symbol-placement": "point",
+                "symbol-spacing": 250,
+                "icon-image": [
+                    "get",
+                    "type",
+                    [
+                        "object",
+                        [
+                            "get",
+                            "info"
+                        ]
+                    ]
+                ],
+                "icon-size": 0.6,
+                "icon-allow-overlap": true
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 0%)",
+                "text-halo-color": "hsl(0, 0%, 100%)",
+                "text-halo-width": 1
+            }
+        }
+    ],
+    "bearing": -41
+}
