@@ -22,7 +22,8 @@
 
 另外有开源代码可以参考:gltf 是一个使用 tree.js用来预览3d 模型文件的网站,并且他的代码是开源的可以用来参考 tree.json 的使用.https://gltf-viewer.donmccurdy.com/
 
-目录中的截图1就是该网站默认打开3D 模型的样子.
+目录中的截图1就是该网站默认打开3D 模型的样子(该效果也是3d模型制作软件显示的效果):
+![](https://github.com/never615/mallto2022Test/blob/master/%E6%88%AA%E5%9B%BE1.png)
 
 
 
