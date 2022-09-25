@@ -9,7 +9,7 @@
 
 ### 涉及到的依赖库
 * 地图引擎 mapbox 官网:mapbox.com
-* mapbox 文档中接入3d 模型的部分:https://docs.mapbox.com/mapbox-gl-js/example/add-3d-model/
+* mapbox 文档中接入3d 模型的部分:https://docs.mapbox.com/mapbox-gl-js/example/add-3d-model/  ,注意直接用这个文档中的的代码加载的3d 模型,显示的效果不是模型本来的样子,不要直接搬这里的 three.js 相关的代码提交给我.
 * tree.js 库地址: https://github.com/mrdoob/three.js
 
 
